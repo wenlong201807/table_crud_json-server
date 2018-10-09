@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <a id="aaaa">获取后台数据</a>
+
+
+  <form action="/api/copying" method="POST">
+
+    <input type="text" name="email" id="">
+    <input type="text" name="title" id="">
+
+    <input type="submit" value="hah">
+
+  </form>
+
+  <script src="../common/jquery.min.js"></script>
+  <script>
+    $('#aaaa').on('click', function () {
+      $.ajax({
+        url: '/course',
+        type: 'GET',
+        data: '',
+        dataType: 'json',
+        success: function (data) {
+          console.log(data);
+        }
+      })
+    })
+
+
+  </script>
+</body>
+
+</html>

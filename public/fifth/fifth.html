@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"> -->
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+  <link rel="stylesheet" href="../common/bulma.min.css">
+  <link rel="stylesheet" href="../common/simplePagination.css">
+
+  <link rel="stylesheet" href="./fifth.css">
+  <title>fifth</title>
+
+</head>
+
+<body>
+  <!-- 弹出层模态框***开始**** -->
+  <div id="bg_model">
+    <div class="container content_model">
+      <ul class="columns content_tag">
+        <li class="button c_tag">查询</li>
+        <li class="button c_tag">添加</li>
+        <li class="button c_tag">选择隐藏</li>
+        <li class="button c_tag">模糊查询</li>
+        <li class="button c_tag">批量删除</li>
+        <li class="button c_tag">修改</li>
+        <li class="button close_model">关闭模态框</li>
+      </ul>
+
+      <ul class="columns content_text">
+        <li class="c_text">
+          <!-- 查询 -->
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" name="" id="">
+                </th>
+                <th>id</th>
+                <th>title</th>
+                <th>author</th>
+                <th>age</th>
+                <th>sec_Id</th>
+                <th>limit</th>
+                <th>
+                  删除
+                </th>
+                <th>
+                  修改
+                </th>
+              </tr>
+            </thead>
+            <tbody id="tbody_query_id">
+
+            </tbody>
+          </table>
+        </li>
+        <li class="c_text">
+          <!-- 相对相应的内容**** 添加 -->
+          <!-- <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" name="" id="">
+                </th>
+                <th>id</th>
+                <th>title</th>
+                <th>author</th>
+                <th>age</th>
+                <th>sec_Id</th>
+                <th>limit</th>
+                <th>
+                  删除
+                </th>
+                <th>
+                  修改
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input disabled type="checkbox" class="checkbox">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <input type="text" name="" id="">
+                </td>
+                <td>
+                  <button disabled class="button deId" deleteId="{{val.id}}">删除</button>
+                </td>
+                <td>
+                  <button disabled class="button">修改</button>
+                </td>
+              </tr>
+            </tbody>
+          </table> -->
+
+          <form id="fifth_add_Form" method="get" action="">
+            <fieldset>
+              <legend>依次输入title，author，age，sec_Id,limit。</legend>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label for="fifth_title">title </label>
+                    </td>
+                    <td>
+                      <input id="fifth_title" name="title" type="text" clear>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_author">author</label>
+                    </td>
+                    <td>
+                      <input id="fifth_author" type="text" name="author" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_age">age</label>
+                    </td>
+                    <td>
+                      <input id="fifth_age" type="number" name="age" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_sec_Id">sec_Id </label>
+                    </td>
+                    <td>
+                      <input id="fifth_sec_Id" type="number" name="sec_Id" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_limit">limit </label>
+                    </td>
+                    <td>
+                      <input id="fifth_limit" type="text" name="limit" clear required>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="add_submit_once" type="submit" value="add_submit_once">
+                    </td>
+                    <td>
+                      <input id="add_submit_more" type="submit" value="add_submit_more">
+                    </td>
+                    <td>
+                      <input id="add_reset" type="reset" value="add_reset">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </fieldset>
+          </form>
+        </li>
+        <li class="c_text">
+          相对相应的内容**** 选择隐藏
+        </li>
+        <li class="c_text">
+          <!-- 相对相应的内容**** 模糊查询 -->
+          <form id="fifth_obscureQuery_Form">
+            <table>
+              <tbody>
+                <tr>
+                  <td>title</td>
+                  <td>
+                    <input type="text" name="" id="get_title">
+                  </td>
+                </tr>
+                <tr>
+                  <td>author</td>
+                  <td>
+                    <input type="text" name="" id="get_author">
+                  </td>
+                </tr>
+                <tr>
+                  <td>age</td>
+                  <td>
+                    <input type="text" name="" id="get_age">
+                  </td>
+                </tr>
+                <tr>
+                  <td>limit</td>
+                  <td>
+                    <input type="text" name="" id="get_limit">
+                  </td>
+                </tr>
+                <tr>
+
+                  <td>
+                    <input type="button" class="button" name="" id="fifth_obscureQuery_Submit" value="模糊查询提交">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </li>
+        <li class="c_text">
+          相对相应的内容**** 批量删除
+
+        </li>
+        <li class="c_text">
+          <!-- 相对相应的内容**** 修改 -->
+          <form id="fifth_amend_Form" method="get" action="">
+            <fieldset>
+              <legend>依次输入title，author，age，sec_Id,limit。</legend>
+              <table>
+                <tbody>
+                  <tr>
+
+                    <td>
+                      <input name="id" type="text" disabled clear>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_title">title </label>
+                    </td>
+                    <td>
+                      <input id="fifth_title" name="title" type="text" clear>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_author">author</label>
+                    </td>
+                    <td>
+                      <input id="fifth_author" type="text" name="author" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_age">age</label>
+                    </td>
+                    <td>
+                      <input id="fifth_age" type="number" name="age" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_sec_Id">sec_Id </label>
+                    </td>
+                    <td>
+                      <input id="fifth_sec_Id" type="number" name="sec_Id" clear required>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="fifth_limit">limit </label>
+                    </td>
+                    <td>
+                      <input id="fifth_limit" type="text" name="limit" clear required>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <input id="amend_submit" type="submit" value="amend_submit">
+                    </td>
+
+                    <td>
+                      <input id="amend_reset" type="reset" value="amend_reset">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </fieldset>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 弹出层模态框***结束**** -->
+  <div class="container">
+    <div class="columns">
+      <div aaa="1" class="column cid ccc">
+        First column
+      </div>
+      <div aaa="2" class="column cid ">
+        Second column
+      </div>
+      <div aaa="3" class="column cid ">
+        Third column
+      </div>
+      <div aaa="4" class="column cid ">
+        Fourth column
+      </div>
+      <div aaa="5" class="column cid ">
+        Fourth column
+      </div>
+    </div>
+    <div class="columns">
+      <div id="pageLocation"></div>
+
+    </div>
+    <hr>
+    <div class="columns">
+      <div class="column ">
+        <!-- 查询 -->
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default query_id" type="button">查询</button>
+          </span>
+          <input type="text" style="color: red;" class="form-control import_id" placeholder="请您输入id值">
+        </div>
+        <!-- /input-group -->
+      </div>
+      <div class="column button add_data">
+        添加
+      </div>
+      <div class="column button">
+        选择隐藏
+      </div>
+
+      <div class="column button obscureQuery_choice">
+        模糊查询
+      </div>
+      <div class="column button deleteChecked"> 批量删除</div>
+    </div>
+    <h1 class="title">Hello World i am fifth</h1>
+    <div class="ob_page" id="ob_pageLocation"></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" id="checkAllbox">
+          </th>
+          <th>id</th>
+          <th>title</th>
+          <th>author</th>
+          <th>age</th>
+          <th>sec_Id</th>
+          <th>limit</th>
+          <th> 删除</th>
+          <th>修改</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
+
+  </div>
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
+  <script src="../common/jquery.min.js"></script>
+  <script src="../common/jquery.simplePagination.js"></script>
+  <script src="../common/template-web.js"></script>
+  <script src="./fifth.js"></script>
+  <script id="templateFifth" type="text/html">
+  {{each fifth as val ind}}
+    <tr>
+        <td>
+          <input type="checkbox" delid="{{val.id}}"  class="checkOnebox">
+        </td>
+        <td class="tpl_id">{{val.id}}</td>
+        <td class="tpl_title">{{val.title}}</td>
+        <td class="tpl_author">{{val.author}}</td>
+        <td class="tpl_age">{{val.age}}</td>
+        <td class="tpl_sec_Id">{{val.sec_Id}}</td>
+        <td class="tpl_limit">{{val.limit}}</td>
+        <td>
+          <button class="button deId" deleteId="{{val.id}}">删除</button>
+        </td>
+        <td>
+          <button class="button amendId" amendId="{{val.id}}">修改</button>
+        </td>
+      </tr>
+  {{/each}}
+  
+  </script>
+
+
+</body>
+
+</html>

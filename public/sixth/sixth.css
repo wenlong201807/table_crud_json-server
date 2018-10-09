@@ -1,0 +1,23 @@
+/* 校验框中的******开始 */
+.error {
+  color: red;
+}
+/* 校验框中的******结束 */
+/* 增*****开始 */
+#bg_model {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(12, 42, 23, 0.3);
+}
+#bg_model #addcontent {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  height: 60%;
+  width: 70%;
+  background-color: #ccc;
+}

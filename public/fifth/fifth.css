@@ -1,0 +1,55 @@
+.cid.ccc {
+  background-color: yellow;
+}
+/* 模糊选择的分页器 */
+.ob_page {
+  display: none;
+}
+/* 模态框******开始 */
+#bg_model {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* background-color: #ccc;
+  opacity: 0.5; 这种写法透明度会继承到子元素上，必须采用下面的方式*/
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+#bg_model .content_model {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  height: 40%;
+  width: 50%;
+  border-radius: 20px;
+  min-width: 300px;
+  min-height: 200px;
+  background-color: #ccc;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#bg_model .content_text {
+  overflow: hidden;
+}
+.c_tag.yellow {
+  background-color: yellow;
+}
+#bg_model .content_text .c_text {
+  position: absolute;
+  /* position: relative; */
+  /* top: 10%; */
+  /* left: 0; */
+  height: 82%;
+  width: 95%;
+  border-radius: 5px 10px 10px 10px;
+  min-width: 240px;
+  min-height: 110px;
+  background-color: green;
+  box-sizing: border-box;
+  padding: 10px;
+  display: none;
+}
+/* 模态框结束****结束 */

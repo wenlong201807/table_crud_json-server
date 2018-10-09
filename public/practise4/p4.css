@@ -1,0 +1,135 @@
+@charset 'utf-8';
+
+/* *****模态框******开始****** */
+.bg_model_add,
+.bg_model_amend,
+.bg_model_showhide {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #ccc;
+  opacity: 0.3; */
+  background: rgba(22, 11, 33, 0.3);
+  z-index: 999;
+  display: none;
+}
+#cover_add,
+#cover_amend,
+#cover_showhide {
+  position: absolute;
+  /* z-index: 99999; */
+  top: calc(50% - 240px);
+  left: calc(50% - 150px);
+  height: 480px;
+  width: 300px;
+  display: none;
+  background-color: red;
+  border: 1px solid #ccc;
+  /* opacity: 0.7; */
+  /* overflow:visible */
+}
+
+/* *****模态框******结束****** */
+
+.container {
+  width: 1300px;
+  margin: 50px auto;
+  height: 600px;
+  background-color: red;
+  overflow: hidden;
+}
+.container::after,
+.container::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.container .le {
+  float: left;
+  width: 100px;
+  margin-right: 20px;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.menu_wrap {
+  overflow: hidden;
+}
+.menu_wrap .menu_item {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  background-color: #ccc;
+  padding-left: 10px;
+}
+.menu_wrap .menu_item.acts {
+  background-color: green;
+}
+.container .ri {
+  float: left;
+  width: 1180px;
+  height: 600px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.ri .operate {
+  height: 40px;
+  width: 100%;
+  /* background-color: yellow; */
+}
+.operate .con {
+  float: left;
+  padding: 5px 10px;
+  margin-right: 10px;
+  /* background-color: red; */
+  cursor: pointer;
+  position: relative;
+  /* z-index: 66; */
+}
+
+.operate .con:hover {
+  background-color: green;
+}
+#db_container {
+  /* float: left; */
+  width: 100%;
+  /* padding: 15px; */
+  height: 478px;
+  /* background-color: yellowgreen; */
+  /* border: 1px solid #ccc; */
+  overflow-y: scroll;
+}
+
+/* table thead tr {
+  position: relative;
+} */
+/* table thead tr th.yellow {
+  background-color: yellow;
+} */
+table thead tr th.yellow.black {
+  background-color: black;
+  color: white;
+}
+/* 
+table thead tr th {
+  line-height: 30px;
+  border: 1px solid #ccc;
+  text-align: center;
+} */
+/* table #database_info {
+  height: 400px;
+  overflow: scroll;
+} */
+/* table tbody tr td {
+  border: 1px dashed #ccc;
+  height: 30px;
+} */
+table tbody tr td.black {
+  background-color: black;
+}
+.ri .page_container {
+  height: 50px;
+  padding: 15px 0 0 30px;
+  /* background-color: yellow; */
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../common/cssreset.css">
+  <link rel="stylesheet" href="./users.css">
+  <link rel="stylesheet" href="../common/pagination.css">
+  <title>用户信息列表</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="le">
+      <ul class="le_menu_wrap">
+        <li pid="1" class="menu act">
+          <a href="javascript:;"> 分组1 </a>
+        </li>
+        <li pid="2" class="menu">
+          <a href="javascript:;"> 分组2 </a>
+        </li>
+        <li pid="3" class="menu">
+          <a href="javascript:;"> 分组3 </a>
+        </li>
+        <li pid="4" class="menu">
+          <a href="javascript:;"> 分组4 </a>
+        </li>
+        <li pid="5" class="menu">
+          <a href="javascript:;"> 分组5 </a>
+        </li>
+        <li pid="6" class="menu">
+          <a href="javascript:;"> 分组6 </a>
+        </li>
+
+      </ul>
+      <form class="le_add_wrap" action="">
+        课程id值：
+        <br>
+        <input class="add_id" type="number">
+        <br> 课程名字：
+        <br>
+        <input class="add_course_name" type="text">
+        <br> 作者：
+        <br>
+        <input class="add_autor" type="text">
+        <br> 大学：
+        <br>
+        <input class="add_college" type="text">
+        <br> 分类：
+        <br>
+        <input class="add_category_Id" type="number">
+        <br>
+      </form>
+
+    </nav>
+    <main class="ri">
+      <div class="ri_page">
+        <div class="m-style M-box3">我是分页器的位置</div>
+      </div>
+      <div class="handle">
+        <span class="com add">添加</span>
+        <span class="com all">查看所有</span>
+        <span class="com check">查询</span>
+        <input class="checkText" type="text" placeholder="请输入您想要查询的id">
+      </div>
+      <form class="content">
+
+        <table>
+          <thead>
+            <tr>
+              <th>是否全选</th>
+              <th>编号</th>
+              <th>姓名</th>
+              <th>性别</th>
+              <th>用户类别</th>
+              <th>注册时间</th>
+              <th>用户地址</th>
+              <th>编辑</th>
+              <th>权限</th>
+              <th>删除</th>
+            </tr>
+            <tr>
+              <th>
+                <input type="checkbox" name="all">
+              </th>
+              <th>val_id</th>
+              <th>val_autor</th>
+              <th>男</th>
+              <th>val_category_Id</th>
+              <th>val_college</th>
+              <th>val_course_name</th>
+              <th>修改</th>
+              <th>所有权</th>
+              <th>删除</th>
+            </tr>
+          </thead>
+          <tbody class="content_info">
+            <!-- <tr>
+              <td>002</td>
+              <td>朱文龙</td>
+              <td>男</td>
+              <td>管理员</td>
+              <td >2018.06.02.18：00</td>
+              <td >背景王庄</td>
+              <td>合法人员</td>
+              <td>编辑</td>
+              <td>所有权</td>
+              <td>删除</td>
+            </tr> -->
+          </tbody>
+        </table>
+
+      </form>
+    </main>
+  </div>
+
+
+  <script src="../common/jquery.min.js"></script>
+  <script src="../common/jquery.stu_pagination.js"></script>
+  <script src="../common/template-web.js"></script>
+
+  <script id="contentTemplate" type="text/html">
+  {{each dataList as val}}
+  <tr>
+    <td> <input type="checkbox" name=""></td>
+      <td class='val_id' >{{val.id}}</td>
+      <td  class="val_autor">{{val.autor}} </td>
+      <td >男</td>
+      <td class="val_category_Id">{{val.category_Id}} </td>
+      <td class="val_college" >{{val.college}} </td>
+      <td class="val_course_name" >{{val.course_name}} </td>   
+      <td> <a class='update' href="javascript:;"></a> 编辑</td>
+      <td>所有权 </td>
+      <td ><a class="delete" href="javascript:;" cid="{{val.id}}">删除</a></td>
+    </tr>
+    {{/each}}
+  </script>
+  <script src="./users.js"></script>
+</body>
+
+</html>

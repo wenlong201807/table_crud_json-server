@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../common/bulma.min.css">
+  <link rel="stylesheet" href="../common/simplePagination.css">
+  <link rel="stylesheet" href="./sixth.css">
+  <title>sixth</title>
+</head>
+
+<body>
+  <!-- 模态框****开始*** -->
+
+  <div id="bg_model">
+    <div id="addcontent">
+      <input class="close" type="button" value="关闭">
+      <form class="" id="addDataForm" method="" action="">
+        <fieldset>
+          <legend>添加*****验证完整的表单</legend>
+          <p>
+            <label for="author">名字</label>
+            <input id="author" name="author" type="text">
+          </p>
+          <p>
+            <label for="age">年龄</label>
+            <input id="age" name="age" type="text">
+          </p>
+          <p>
+            <label for="sixth_Id">分类</label>
+            <input id="sixth_Id" name="sixth_Id" type="text">
+          </p>
+          <p>
+            <input id="addDataOne" type="submit" value="添加一次">
+            <input id="addDataMore" type="submit" value="添加多次">
+
+          </p>
+        </fieldset>
+      </form>
+      <form class="" id="amendDataForm" method="" action="">
+        <fieldset>
+          <legend>修改****不不*验证完整的表单</legend>
+          <p>
+            <label for="author">名字</label>
+            <input id="author" name="author" type="text">
+          </p>
+          <p>
+            <label for="age">年龄</label>
+            <input id="age" name="age" type="text">
+          </p>
+          <p>
+            <label for="sixth_Id">分类</label>
+            <input id="sixth_Id" name="sixth_Id" type="text">
+          </p>
+          <p>
+            <input id="amendDataOne" type="submit" value="修改提交">
+            <!-- <input id="amendDataOne" type="button" value="修改提交"> -->
+
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <!-- 模态框****结束*** -->
+
+  <a class="buttom  addBtn" href="javascript:;">增</a>
+
+  <a class="buttom" id="checkBtn" href="javascript:;">查</a>
+  <input style="color: red;" type="number" id="checkBox" placeholder="输id值">
+
+  </nav>
+  <div id="pageLocation"></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>author</th>
+        <th>age</th>
+        <th>sixth_Id</th>
+        <th>amend</th>
+      </tr>
+    </thead>
+    <tbody id="append_tbody_tpl">
+
+    </tbody>
+  </table>
+
+  </form>
+  </div>
+
+
+  <script src="../common/jquery.min.js"></script>
+  <script src="../common/jquery.simplePagination.js"></script>
+  <script src="../common/template-web.js"></script>
+  <!-- <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script> -->
+  <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+  <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+  <script src="./sixtest.js"></script>
+  <script src="./sixth.js"></script>
+  <script id="sixth_tpl_code" type="text/html">
+{{each list  val ind}}
+<tr>
+  <td class="val_id" >{{val.id}}</td>
+  <td class="val_au">{{val.author}}</td>
+  <td class="val_ag">{{val.age}}</td>
+  <td class="val_si">{{val.sixth_Id}}</td>
+  <td class="button amendBtn"
+   ai="{{val.id}}" 
+   au="{{val.author}}" 
+   ag="{{val.age}}" 
+   ass="{{val.sixth_Id}}" 
+   >amend</td>
+  <td class="button deletee" deleteid="{{val.id}}" >delete</td>
+</tr>
+{{/each}}
+</script>
+
+
+</body>
+
+</html>

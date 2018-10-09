@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../common/cssreset.css">
+  <link rel="stylesheet" href="./p1.css">
+  <link rel="stylesheet" href="../common/pagination.css">
+  <title>practise1_p1</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="le">
+      <ul>
+        <li pid="1" class="menu act">
+          <a href="javascript:;"> 我是菜单选项001 </a>
+        </li>
+        <li pid="2" class="menu">
+          <a href="javascript:;"> 我是菜单选项002 </a>
+        </li>
+        <li pid="3" class="menu">
+          <a href="javascript:;"> 我是菜单选项003 </a>
+        </li>
+        <li pid="4" class="menu">
+          <a href="javascript:;"> 我是菜单选项004 </a>
+        </li>
+        <li pid="5" class="menu">
+          <a href="javascript:;"> 我是菜单选项005 </a>
+        </li>
+        <li pid="6" class="menu">
+          <a href="javascript:;"> 我是菜单选项006 </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="ri">
+      <div class="ri_page">
+        <div class="m-style M-box3">我是分页器的位置</div>
+      </div>
+      <ul class="content">
+        模板位置
+        <li class="template">
+          <img class="template_img" src="" alt="没有图片时，我会显示" title="有图片时，鼠标在这我在这">
+          <h3 class="title">title</h3>
+          <span class="fir">teacher</span>
+          <span class="sec">introduce</span>
+        </li>
+
+      </ul>
+    </main>
+  </div>
+
+
+
+
+  <script src="../common/jquery.min.js"></script>
+  <script src="../common/jquery.stu_pagination.js"></script>
+  <script src="../common/template-web.js"></script>
+  <!-- <script id="contentTemplate" type="text/html" src="./p1_arttemplate.js"> -->
+  <script id="contentTemplate" type="text/html">
+  {{each dataList as val}}
+  <li class="template">
+      <img class="template_img" src="" alt="没有图片时，我会显示" title="有图片时，鼠标在这我在这">
+      <h3 class="title">{{val.course_name}}</h3>
+      <span class="pan fir">{{val.autor}}</span>
+      <span class="pan sec">{{val.college}}</span>
+    </li>
+  {{/each}}
+  </script>
+  <script src="./p1.js"></script>
+</body>
+
+</html>

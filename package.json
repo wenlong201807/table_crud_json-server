@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "json-server --watch app.js",
+    "start": "json-server --watch server.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mockjs": "^1.0.1-beta3"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1"
+  }
+}

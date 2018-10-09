@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../common/cssreset.css">
+  <link rel="stylesheet" href="../common/simplePagination.css">
+  <link rel="stylesheet" href="../common/bulma.min.css">
+  <link rel="stylesheet" href="./p4.css">
+
+  <title>p4</title>
+</head>
+
+<body>
+
+  <!-- 模态框******* -->
+  <!-- 添加 -->
+  <div class="bg_model_add">
+
+    <div id="cover_add">
+      <form id="add_content" action="">
+        <h1>***添加数据****添加数据</h1>
+        <input type="checkbox" name="" id="">
+        <!-- id:
+        <input type="text" name="id" class='id'> -->
+        ip:
+        <input type="text" name="ip" class='ip'> email:
+        <input type="text" name="email" class='email'> title:
+        <input type="text" name="title" class='title'> author:
+        <input type="text" name="author" class='author'> language:
+        <input type="text" name="language" class='language'> address:
+        <input type="text" name="address" class='address'> color:
+        <input type="text" name="color" class='color'> age
+        <input type="text" name="age" class='age'> category_Id:
+        <input type="text" name="category_Id" class='category_Id'> lastDate:
+        <input type="text" name="lastDate" class='lastDate'> limit:
+        <input type="text" name="limit" class='limit'>
+        <hr>
+        <input type="button" value="添加**提交**关闭模态框" id="add_send_close" class=" button">
+        <input type="button" value="添加**提交**继续添加" id="add_send_continue" class=" button">
+        <input type="reset" value="重置**提交" class=" button">
+        <input type="button" value="关闭模态框" class="close button">
+      </form>
+
+    </div>
+  </div>
+  <!-- 修改 -->
+  <div class="bg_model_amend">
+    <div id="cover_amend">
+      <form id="amend_content" action="">
+        <h1>***修改数据*****修改数据***</h1>
+        <!-- id:
+      <input type="text" name="id" class='amend_id'> -->
+        ip:
+        <input type="text" name="ip" class='amend_ip'> email:
+        <input type="text" name="email" class='amend_email'> title:
+        <input type="text" name="title" class='amend_title'> author:
+        <input type="text" name="author" class='amend_author'> language:
+        <input type="text" name="language" class='amend_language'> address:
+        <input type="text" name="address" class='amend_address'> color:
+        <input type="text" name="color" class='amend_color'> age
+        <input type="text" name="age" class='amend_age'> category_Id:
+        <input type="text" name="category_Id" class='amend_category_Id'> lastDate:
+        <input type="text" name="lastDate" class='amend_lastDate'> limit:
+        <input type="text" name="limit" class='amend_limit'>
+        <hr>
+        <input type="button" value="修改**提交" id="amend_send" class=" button">
+        <input type="reset" value="重置**提交" class=" button">
+        <input type="button" value="关闭模态框" class="close button">
+      </form>
+    </div>
+  </div>
+
+  <!-- 选择显示那几个列表 -->
+  <!-- 修改 -->
+  <div class="bg_model_showhide">
+    <div id="cover_showhide">
+      <form id="showhide_content" action="">
+        <h1>***打勾的会显示，不打勾的隐藏***</h1>
+        <p>
+          <span>id</span>
+          <input type="checkbox" mrdg showhideid="id" class='amend_id'>
+        </p>
+        <p>
+          <span>ip</span>
+          <input type="checkbox" mrdg showhideip="ip" class='amend_ip'>
+        </p>
+        <p>
+          <span>email</span>
+          <input type="checkbox" mrdg showhideemail="email" class='amend_email'>
+        </p>
+        <p>
+          <span>title</span>
+          <input type="checkbox" mrdg showhidetitle="title" class='amend_title'>
+        </p>
+        <!-- 
+        ip:
+        <input type="checkbox" mrdg showhideip="ip" class='amend_ip'>
+       email:
+        <input type="checkbox" mrdg showhideemail="email" class='amend_email'>
+       title:
+        <input type="checkbox" mrdg showhidetitle="title" class='amend_title'>
+        <hr> author:
+        <input type="checkbox" mrdg showhideauthor="author" class='amend_author'>
+        <hr> language:
+        <input type="checkbox" mrdg showhidelanguage="language" class='amend_language'>
+        <hr> address:
+        <input type="checkbox" mrdg showhideaddress="address" class='amend_address'>
+        <hr> color:
+        <input type="checkbox" mrdg showhidecolor="color" class='amend_color'>
+        <hr> age
+        <input type="checkbox" mrdg showhideage="age" class='amend_age'>
+        <hr> category_Id:
+        <input type="checkbox" mrdg showhidecategoryId="category_Id" class='amend_category_Id'>
+        <hr> lastDate:
+        <input type="checkbox" mrdg showhidelaseDate="lastDate" class='amend_lastDate'>
+        <hr> limit:
+        <input type="checkbox" mrdg showhidelimit="limit" class='amend_limit'>
+        <hr> -->
+        <input type="button" value="打勾显示" id="dg_show" class="button">
+
+        <input type="button" value="取消操作" class="close button">
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!-- 模态框***结束**** -->
+  <div class="container">
+    <aside class="le">
+      <ul class="menu_wrap">
+        <li cate='1' class="button menu_item acts">分组1</li>
+        <li cate='2' class="button menu_item">分组2</li>
+        <li cate='3' class="button menu_item">分组3</li>
+        <li cate='4' class="button menu_item">分组4</li>
+        <li cate='5' class="button menu_item">分组5</li>
+      </ul>
+    </aside>
+    <main class="ri">
+      <div class="operate">
+
+        <div class="con  button" id="add" title="点击我**添加新的一项数据">add</div>
+        <div class="con button" id="delete_checked" title="删除被选大√的全部信息">delete_checked</div>
+        <div class="con  button" id="check" title="点击我**依据id查询某一项数据">check</div>
+        <input class="con " id="checkbox" type="text" title="暂时只能输入id值">
+        <div class="con  button" id="showhide" title="显示或者隐藏某一竖列"> showhide</div>
+        <div class="con button" id="checkAll" title="点击我**查看数据库全部信息">checkAll</div>
+        <div class="con button" id="total_add_id" title="点击我**查看数据库总共添加过哪些id信息">total_add_id
+        </div>
+        <div class="con button" id="total_delete_id" title="点击我**查看数据库总共删除过哪些id信息">total_delete_id
+        </div>
+        <div class="con button" id="total_refix_id" title="点击我**查看数据库总共修改的信息条数">total_refix_id
+        </div>
+      </div>
+      <div id="db_container">
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+
+              <th class="">
+                <!-- <td class="val_checkbox" ><input type="checkbox" delete_id="{{val.id}}" dg></td> -->
+                <input type="checkbox" name="" id="delete_all">
+              </th>
+              <th class="yellow ">id</th>
+              <th class="yellow ">ip</th>
+              <th class="yellow ">email</th>
+              <th class="yellow ">title</th>
+              <th class="yellow ">author</th>
+              <th class="yellow ">language</th>
+              <th class="yellow ">address</th>
+              <th class="yellow ">color</th>
+              <th class="yellow ">age</th>
+              <th class="yellow ">category_Id</th>
+              <th class="yellow ">lastDate</th>
+              <th class="yellow ">limit</th>
+              <th class=" ">
+                <a href="javascript:;">delete</a>
+              </th>
+              <th class=" ">
+                <a href="javascript:;">amend</a>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <input type="checkbox" name="" id="" disabled>
+              </th>
+              <th>123456</th>
+              <th>12.23.45.69</th>
+              <th>1573511441@qq.com</th>
+              <th>测试练习</th>
+              <th>朱文龙</th>
+              <th>简体中文</th>
+              <th>北京</th>
+              <th>彩色</th>
+              <th>123</th>
+              <th>5</th>
+              <th>today</th>
+              <th>查看</th>
+              <th>
+                删除
+              </th>
+              <th>
+                修改
+              </th>
+            </tr>
+          </thead>
+          <tbody id="database_info">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="page_container">
+        <div id="pages"></div>
+        <input type="text" value="" id="txtSelectPage" placeholder="1">
+        <input type="button" value="跳转" id="btnSelectPage" class="button">
+      </div>
+    </main>
+  </div>
+
+  <script src="../common/jquery.min.js"></script>
+  <script src="../common/template-web.js"></script>
+  <script src="../common/jquery.simplePagination.js"></script>
+
+  <script id="database" type="text/html">
+    {{each dbList as val}}
+    <tr>
+      <td class="val_checkbox" ><input type="checkbox" deleteid="{{val.id}}" dg></td>
+      <td class="val_id" >{{val.id}}</td>
+      <td class="val_ip" >{{val.ip}}</td>
+      <td class="val_email" >{{val.email}}</td>
+      <td class="val_title" >{{val.title}}</td>
+      <td class="val_author" >{{val.author}}</td>
+      <td class="val_language" >{{val.language}}</td>
+      <td class="val_address" >{{val.address}}</td>
+      <td class="val_color" >{{val.color}}</td>
+      <td class="val_age" >{{val.age}}</td>
+      <td class="val_category_Id" >{{val.category_Id}}</td>
+      <td class="val_lastDate" >{{val.lastDate}}</td>
+      <td class="val_limit" >{{val.limit}}</td>     
+      <td>
+        <a aaa="{{val.id}}" href="javascript:;" class="delete button">delete</a>
+      </td>
+      <td>
+        <a aaa="{{val.id}}"  href="javascript:;"  class="amend button">amend</a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </script>
+  <script src="./p4.js"></script>
+</body>
+
+</html>

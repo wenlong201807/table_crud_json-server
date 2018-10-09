@@ -1,0 +1,240 @@
+@charset 'utf-8';
+
+/* 模态框部分*****开始 */
+/* 使用opacity的话content无法变为不透明，
+* 所有这里使用了background：rgba(0,0,0,0.3))属性来设置透明 */
+.bg_model {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+.bg_model .content_model {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  border-radius: 8px;
+  width: 30%;
+  height: 40%;
+  background-color: #ccc;
+}
+.bg_model .content_model .model_center_content {
+  position: relative;
+  top: 10%;
+  left: 5%;
+  height: 80%;
+  width: 90%;
+  /* background-color: red; */
+}
+.bg_model .content_model .bg_model_close {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  position: fixed;
+}
+.bg_model .content_model .bg_model_submit {
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+}
+.bg_model .content_model .bg_model_reset {
+  position: absolute;
+  bottom: 3%;
+  right: 30%;
+}
+.bg_model .content_model .model_center_content .choice_item_wrap,
+.bg_model .content_model .model_center_content .choice_content_wrap {
+  overflow: hidden;
+}
+
+.bg_model .content_model .model_center_content .choice_item_wrap .choice_item {
+  padding: 2% 5%;
+  float: left;
+  margin-right: 5%;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+/* .bg_model
+  .content_model
+  .model_center_content
+  .choice_item_wrap
+  .choice_item.green {
+  background-color: green;
+} */
+.bg_model
+  .content_model
+  .model_center_content
+  .choice_content_wrap
+  .choice_content {
+  height: 100%;
+  /* width: 80%; */
+  /* margin: 0px auto; */
+  /* background-color: green; */
+  display: none;
+}
+
+/* 模态框部分*****结束 */
+
+.container {
+  width: 1150px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.container .le {
+  float: left;
+  width: 170px;
+  margin-right: 10px;
+}
+.container .le .le_menu_wrap {
+  overflow: hidden;
+}
+.container .le .le_menu_wrap .menu:hover {
+  background-color: yellow;
+}
+.container .le .le_menu_wrap .menu {
+  margin-bottom: 10px;
+  /* background-color: red; */
+  height: 30px;
+  padding: 0px 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.container .le .le_menu_wrap .menu.act {
+  background-color: green;
+}
+.container .le_add_wrap {
+  border: 1px solid red;
+  height: 400px;
+  width: 160px;
+  margin: 0px auto;
+}
+.container .le_add_wrap .add_context {
+  height: 30px;
+  width: 110px;
+  padding: 0px 10px;
+  text-align: left;
+}
+.container .ri {
+  float: left;
+  width: 965px;
+  /* background-color: red; */
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.container .ri .ri_page {
+  height: 50px;
+  line-height: 50px;
+  /* background-color: yellow; */
+}
+.container .ri .handle {
+  padding: 10px 0px;
+  height: 30px;
+  line-height: 30px;
+  /* background-color: yellowgreen; */
+}
+.container .ri .handle .com {
+  display: block;
+  padding: 0px 20px;
+  height: 30px;
+  /* width: 50px; */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 17px;
+  letter-spacing: 5px;
+  background-color: red;
+}
+.container .ri .handle .add,
+.container .ri .handle .deleteAll,
+.container .ri .handle .refix,
+.container .ri .handle .all {
+  float: left;
+}
+.container .ri .handle .check {
+  float: right;
+}
+.container .ri .handle .check:hover,
+.container .ri .handle .add:hover,
+.container .ri .handle .deleteAll:hover,
+.container .ri .handle .refix:hover,
+.container .ri .handle .amend:hover {
+  background-color: hotpink;
+}
+.container .ri .handle .checkText {
+  display: block;
+  float: right;
+  padding: 0px 10px;
+  width: 200px;
+  height: 28px;
+  text-align: left;
+  margin-right: 15px;
+}
+.container .ri .content {
+  /* overflow: scroll; */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 20px auto 0px;
+  height: 530px;
+  width: 940px;
+  /* background-color: pink; */
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start; */
+}
+.container .ri .content table {
+  /* height: 250px; */
+  width: 900px;
+  margin: 0 auto;
+  /* border: 1px solid hotpink; */
+  box-sizing: border-box;
+  /* box-shadow: 1px 1px 5px yellowgreen; */
+}
+/* .container .ri .content table thead {
+  background-color: yellowgreen;
+} */
+.container .ri .content table thead tr {
+  height: 40px;
+}
+.container .ri .content table thead tr th {
+  line-height: 40px;
+  /* width: 50px; */
+  border: 1px solid red;
+  /* background-color: green; */
+  text-align: center;
+  white-space: nowrap;
+  font-size: 18px;
+  /* text-align: justify;
+  text-align-last: justify; */
+}
+.container .ri .content table tbody tr td {
+  line-height: 30px;
+  /* width: 50px; */
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  /* background-color: pink; */
+  text-align: left;
+  font-size: 15px;
+  /* text-align: justify;
+  text-align-last: justify; */
+}
+.container .ri .content table tbody tr td#delete,
+.container .ri .content table tbody tr td#update {
+  cursor: pointer;
+}
+
+.container .ri .content table tbody input {
+  height: 25px;
+  width: 50px;
+  outline: none;
+  border: none;
+}

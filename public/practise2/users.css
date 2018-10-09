@@ -1,0 +1,155 @@
+@charset 'utf-8';
+.container {
+  width: 1150px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.container .le {
+  float: left;
+  width: 170px;
+  margin-right: 10px;
+}
+.container .le .le_menu_wrap {
+  overflow: hidden;
+}
+.container .le .le_menu_wrap .menu:hover {
+  background-color: yellow;
+}
+.container .le .le_menu_wrap .menu {
+  margin-bottom: 10px;
+  background-color: red;
+  height: 30px;
+  padding: 0px 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.container .le .le_menu_wrap .menu.act {
+  background-color: green;
+}
+.container .le_add_wrap {
+  border: 1px solid red;
+  height: 400px;
+  width: 160px;
+  margin: 0px auto;
+}
+.container .le_add_wrap .add_context {
+  height: 30px;
+  width: 110px;
+  padding: 0px 10px;
+  text-align: left;
+}
+.container .ri {
+  float: left;
+  width: 965px;
+  background-color: red;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.container .ri .ri_page {
+  height: 50px;
+  line-height: 50px;
+  /* background-color: yellow; */
+}
+.container .ri .handle {
+  padding: 10px 0px;
+  height: 30px;
+  line-height: 30px;
+  background-color: yellowgreen;
+}
+.container .ri .handle .com {
+  display: block;
+  padding: 0px 20px;
+  height: 30px;
+  /* width: 50px; */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 17px;
+  letter-spacing: 5px;
+  background-color: red;
+}
+.container .ri .handle .add,
+.container .ri .handle .all {
+  float: left;
+}
+.container .ri .handle .check {
+  float: right;
+}
+.container .ri .handle .check:hover,
+.container .ri .handle .add:hover,
+.container .ri .handle .amend:hover {
+  background-color: hotpink;
+}
+.container .ri .handle .checkText {
+  display: block;
+  float: right;
+  padding: 0px 10px;
+  width: 200px;
+  height: 28px;
+  text-align: left;
+  margin-right: 15px;
+}
+.container .ri .content {
+  /* overflow: scroll; */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 20px auto 0px;
+  height: 530px;
+  width: 940px;
+  background-color: pink;
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start; */
+}
+.container .ri .content table {
+  /* height: 250px; */
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid hotpink;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px yellowgreen;
+}
+.container .ri .content table thead {
+  background-color: yellowgreen;
+}
+.container .ri .content table thead tr {
+  height: 40px;
+}
+.container .ri .content table thead tr th {
+  line-height: 40px;
+  /* width: 50px; */
+  border: 1px solid red;
+  background-color: green;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 18px;
+  /* text-align: justify;
+  text-align-last: justify; */
+}
+.container .ri .content table tbody tr td {
+  line-height: 30px;
+  /* width: 50px; */
+  padding-left: 15px;
+  border: 1px solid yellow;
+  /* background-color: pink; */
+  text-align: left;
+  font-size: 15px;
+  /* text-align: justify;
+  text-align-last: justify; */
+}
+.container .ri .content table tbody tr td#delete,
+.container .ri .content table tbody tr td#update {
+  cursor: pointer;
+}
+
+.container .ri .content table tbody tr td input {
+  height: 25px;
+  width: 50px;
+  outline: none;
+  border: none;
+}
